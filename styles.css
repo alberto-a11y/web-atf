@@ -164,7 +164,7 @@ a {
   transform: translateX(-50%);
   z-index: 260;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 0.2rem;
   max-width: calc(100% - 1.5rem);
@@ -175,6 +175,8 @@ a {
   border-radius: var(--radius-pill);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .site-dock__link {
@@ -185,6 +187,29 @@ a {
   color: rgba(255, 255, 255, 0.75);
   border-radius: var(--radius-pill);
   transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.site-dock::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .site-dock {
+    gap: 0.08rem;
+    padding: 0.3rem 0.35rem;
+    justify-content: center;
+  }
+
+  .site-dock__link {
+    padding: 0.38rem 0.48rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.005em;
+  }
+
+  .site-dock__link:nth-child(2) {
+    max-width: none;
+  }
 }
 
 .site-dock__link:hover,
@@ -529,6 +554,27 @@ a {
   background: var(--ink-faint);
 }
 
+@media (max-width: 899px) {
+  .hero-text__support-item:not(.hero-text__support-item--lead) {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 3px 1fr;
+    column-gap: 0.55rem;
+    align-items: start;
+    text-align: left;
+  }
+
+  .hero-text__support-item:not(.hero-text__support-item--lead)::before {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 3px;
+    height: 3px;
+    display: inline-block;
+    margin-top: 0.65em;
+  }
+}
+
 .hero-text__support-item--lead {
   font-size: clamp(1.08rem, 2.15vw, 1.32rem);
   line-height: 1.45;
@@ -626,6 +672,55 @@ a {
     justify-content: flex-start;
     max-width: min(1180px, calc(100% - 1.75rem));
     margin-top: clamp(-1.9rem, -3.2vh, -1.1rem);
+  }
+}
+
+@media (max-width: 899px) {
+  .page-home .hero-cta-row,
+  .page-tactiq .hero-cta-row {
+    margin-top: clamp(0.6rem, 3.2vh, 1.2rem);
+  }
+
+  /* En mobile el dock inferior ya cumple la función de navegación/acción */
+  .page-home .hero-cta-row,
+  .page-tactiq .hero-cta-row {
+    display: none;
+  }
+
+  /* Hero Home: alinear a la izquierda y usar ancho disponible */
+  .page-home .hero-text__mast {
+    text-align: left;
+    margin-inline: 0;
+    max-width: none;
+  }
+
+  .page-home .editorial-display {
+    margin-inline: 0;
+    max-width: none;
+    text-align: left;
+    font-size: clamp(2.6rem, 8vw, 3.95rem);
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+  }
+
+  .page-home .hero-text__support {
+    margin-inline: 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  /* Home: que el lead del hero coincida en escala con el h2 del bloque */
+  .page-home .hero-text__support-item.hero-text__support-item--lead {
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    line-height: 1.2;
+    text-align: left;
+    text-justify: none;
+  }
+
+  /* Home: bullets con tamaño consistente con "ATF Wines integra..." */
+  .page-home .hero-text__support-item:not(.hero-text__support-item--lead) {
+    font-size: clamp(1rem, 1.45vw, 1.14rem);
+    line-height: 1.68;
   }
 }
 
@@ -1319,6 +1414,16 @@ main#contenido .statement {
   padding-block: clamp(4rem, 10vw, 6.5rem);
 }
 
+@media (max-width: 899px) {
+  .page-home .platform-section {
+    border-top: none;
+  }
+
+  .page-home .contact-cta {
+    border-top: none;
+  }
+}
+
 .contact-cta .narrow {
   max-width: 46rem;
 }
@@ -1433,7 +1538,7 @@ main#contenido .statement {
   gap: 0.22rem;
   font-size: clamp(2rem, 3.9vw, 2.75rem);
   line-height: 1.02;
-  font-weight: 700;
+  font-weight: 560;
   letter-spacing: -0.034em;
   text-align: left;
   margin-left: clamp(-3rem, -5.2vw, -1.7rem);
@@ -1441,6 +1546,31 @@ main#contenido .statement {
 
 .tactiq-home-hero .hero-text__support-item.hero-text__support-item--lead span {
   display: block;
+}
+
+@media (max-width: 899px) {
+  .tactiq-home-hero .hero-text__support {
+    margin-inline: 0;
+    text-align: left;
+    max-width: none;
+  }
+
+  .tactiq-home-hero .hero-text__support-item.hero-text__support-item--lead {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .page-tactiq .hero-text__mast {
+    text-align: left;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .tactiq-home-hero .editorial-display {
+    max-width: none;
+    margin-inline: 0;
+    text-align: left;
+  }
 }
 
 .tactiq-platform .platform-section__inner {
@@ -1486,9 +1616,8 @@ main#contenido .statement {
 }
 
 .tactiq-platform__intro .section__p {
-  max-width: 100%;
-  width: 100%;
-  margin-inline: auto;
+  max-width: 26rem;
+  margin: 0 auto;
   font-size: clamp(1.22rem, 1.85vw, 1.42rem);
   line-height: 1.58;
   letter-spacing: -0.01em;
@@ -1501,6 +1630,64 @@ main#contenido .statement {
 .tactiq-platform.section--center-cards .tactiq-platform__intro .section__p {
   text-align: center;
   margin-inline: auto;
+}
+
+@media (max-width: 899px) {
+  /* En mobile queremos coherencia: alinear a la izquierda y usar el ancho completo */
+  .tactiq-platform {
+    --tactiq-center-width: 100%;
+  }
+
+  /* Anular centrado forzado por reglas más específicas (section--center-cards) */
+  .tactiq-platform.section--center-cards .tactiq-platform__intro .section__title,
+  .tactiq-platform.section--center-cards .tactiq-platform__intro .section__p {
+    margin-inline: 0;
+    text-align: left;
+    max-width: none;
+    width: 100%;
+  }
+
+  /* Forzar específicamente el alineado del título */
+  .tactiq-platform.section--center-cards .tactiq-platform__intro .section__title {
+    text-align: left !important;
+  }
+
+  .tactiq-platform__intro {
+    width: 100%;
+    justify-self: start;
+    justify-items: start;
+    text-align: left;
+    margin-inline: 0;
+    align-content: start;
+  }
+
+  .tactiq-platform__intro .section__title {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  .tactiq-platform__intro .section__p {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .tactiq-platform__how {
+    width: 100%;
+    justify-self: start;
+    justify-items: start;
+    margin-inline: 0;
+  }
+
+  .tactiq-platform__how .section__title {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    text-align: left;
+  }
 }
 
 .tactiq-platform__how .section__title {
@@ -1519,6 +1706,20 @@ main#contenido .statement {
   justify-items: center;
   justify-self: center;
   margin-top: clamp(0.55rem, 1.2vw, 1rem);
+}
+
+@media (max-width: 899px) {
+  .tactiq-platform__how .section__title {
+    text-align: left;
+    margin-inline: 0;
+    max-width: none;
+  }
+
+  .tactiq-platform__how {
+    justify-items: start;
+    justify-self: start;
+    margin-inline: 0;
+  }
 }
 
 .tactiq-platform__cards {
@@ -1582,6 +1783,26 @@ main#contenido .statement {
   letter-spacing: -0.018em;
   text-align: center;
   white-space: nowrap;
+}
+
+@media (max-width: 899px) {
+  .page-tactiq {
+    overflow-x: hidden;
+  }
+
+  .tactiq-platform__cards {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .tactiq-platform__result-statement {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    white-space: normal;
+    text-align: left;
+  }
 }
 
 .btn {
