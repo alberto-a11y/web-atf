@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace | ATF Wines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .marketplace-login {
+        min-height: 100svh;
+        padding-top: calc(var(--header-h) + 2.5rem);
+        padding-bottom: 3rem;
+        display: grid;
+        place-items: center;
+      }
+
+      .marketplace-login__card {
+        width: min(34rem, calc(100% - 2rem));
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 1.4rem;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .marketplace-login__title {
+        margin: 0 0 0.35rem;
+        font-size: clamp(1.5rem, 2.8vw, 2rem);
+        color: var(--ink);
+      }
+
+      .marketplace-login__text {
+        margin: 0;
+        color: var(--ink-muted);
+      }
+
+      .marketplace-login__actions {
+        margin-top: 1rem;
+        display: grid;
+        gap: 0.6rem;
+      }
+
+      .marketplace-login__actions .btn {
+        width: 100%;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index.html">ATF <span class="logo__wines">Wines</span></a>
+      </div>
+    </header>
+
+    <main class="marketplace-login">
+      <section class="marketplace-login__card" aria-label="Ingreso Marketplace">
+        <h1 class="marketplace-login__title">Marketplace</h1>
+        <p class="marketplace-login__text">Ingresa para acceder a portafolios y gestión comercial.</p>
+        <div class="marketplace-login__actions">
+          <button class="btn btn--outline" type="button">Ingresar con Google</button>
+          <button class="btn btn--outline" type="button">Ingresar con Apple</button>
+          <button class="btn btn--outline" type="button">Ingresar con Email</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
