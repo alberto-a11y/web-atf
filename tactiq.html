@@ -1,140 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="TACTIQ — Plataforma de ejecución comercial para el canal Horeca. ATF Wines."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="TACTIQ | ATF Wines" />
-    <meta
-      property="og:description"
-      content="TACTIQ convierte la actividad comercial del canal HORECA en decisiones claras y acciones que impulsan ventas."
-    />
-    <meta property="og:url" content="https://atfwines.com/tactiq.html" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="TACTIQ | ATF Wines" />
-    <meta
-      name="twitter:description"
-      content="TACTIQ convierte la actividad comercial del canal HORECA en decisiones claras y acciones que impulsan ventas."
-    />
-    <title>TACTIQ | ATF Wines</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body class="page-tactiq">
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TACTIQ — ATF Wines</title>
+  <meta name="description" content="TACTIQ convierte la actividad comercial del canal HORECA en decisiones claras y acciones que impulsan ventas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/tactiq.css" />
+</head>
+<body>
 
-    <div id="site-header"></div>
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">ATF WINES</a>
+    <div class="nav-links">
+      <a href="/#marketplace">Marketplace</a>
+      <a href="/tactiq.html" aria-current="page">TACTIQ</a>
+      <a href="/#nosotros">Nosotros</a>
+      <a href="/#contacto">Contacto</a>
+    </div>
+    <a href="/marketplace.html" class="btn btn--primary nav-cta">Ingresar →</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menú">
+      <span></span><span></span>
+    </button>
+  </nav>
 
-    <nav class="nav" id="nav" aria-label="Principal">
-      <a href="index.html">Home</a>
-      <a href="tactiq.html" aria-current="page">Tactiq</a>
-      <a href="index.html#contacto">Contacto</a>
-      <a href="index.html#login">Iniciar sesión</a>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#marketplace">Marketplace</a>
+    <a href="/tactiq.html">TACTIQ</a>
+    <a href="/#nosotros">Nosotros</a>
+    <a href="/#contacto">Contacto</a>
+    <a href="/marketplace.html" class="btn btn--primary">Ingresar →</a>
+  </div>
+
+  <main>
+
+    <!-- HERO TACTIQ -->
+    <section class="tactiq-hero">
+      <div class="tactiq-hero-inner">
+        <p class="eyebrow" data-reveal>Plataforma de ejecución comercial</p>
+        <h1 class="tactiq-hero-title" data-reveal>
+          La venta en canal HORECA<br>
+          requiere <em>más que visitas.</em>
+        </h1>
+        <p class="tactiq-hero-sub" data-reveal>
+          TACTIQ convierte la actividad de tu equipo en terreno en decisiones claras
+          y acciones que impulsan ventas, guiando al equipo sobre qué hacer, dónde
+          enfocar y cómo ejecutar.
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a href="#demo" class="btn btn--primary">Agendar demo</a>
+          <a href="/#contacto" class="btn btn--outline">Más información</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="section" id="como-funciona">
+      <p class="section-label">CÓMO FUNCIONA</p>
+      <div class="pillars-grid">
+        <div class="pillar-card" data-reveal>
+          <span class="pillar-num">01</span>
+          <h3 class="pillar-title">Capturando lo que pasa en terreno</h3>
+          <p class="pillar-desc">Visibilidad real de clientes, cuentas y actividad comercial del equipo en campo.</p>
+        </div>
+        <div class="pillar-card" data-reveal>
+          <span class="pillar-num">02</span>
+          <h3 class="pillar-title">Ordenando la información automáticamente</h3>
+          <p class="pillar-desc">Priorización clara de cuentas, oportunidades y próximos pasos sin trabajo manual.</p>
+        </div>
+        <div class="pillar-card" data-reveal>
+          <span class="pillar-num">03</span>
+          <h3 class="pillar-title">Activando acciones concretas</h3>
+          <p class="pillar-desc">Tareas automáticas y estratégicas según impacto comercial real de cada cuenta.</p>
+        </div>
+        <div class="pillar-card" data-reveal>
+          <span class="pillar-num">04</span>
+          <h3 class="pillar-title">Guiando la ejecución con criterio</h3>
+          <p class="pillar-desc">Aplicamos know-how comercial directamente en la operación del equipo en terreno.</p>
+        </div>
+        <div class="pillar-card" data-reveal>
+          <span class="pillar-num">05</span>
+          <h3 class="pillar-title">Construyendo inteligencia continua</h3>
+          <p class="pillar-desc">Historial por cliente y vendedor, junto con lectura del contexto competitivo.</p>
+        </div>
+        <div class="pillar-card" data-reveal>
+          <span class="pillar-num">06</span>
+          <h3 class="pillar-title">Seguimiento de metas y resultados</h3>
+          <p class="pillar-desc">Cada vendedor ve su avance; cada gerente ve el cuadro completo — presupuestos, rotación de productos y KPIs por zona.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="outcomes-section">
+      <div class="outcomes-inner">
+        <div class="outcome" data-reveal>
+          <p class="outcome-value">Más foco</p>
+          <p class="outcome-label">en cuentas con potencial real</p>
+        </div>
+        <div class="outcome-divider"></div>
+        <div class="outcome" data-reveal>
+          <p class="outcome-value">Mejor ejecución</p>
+          <p class="outcome-label">del equipo en terreno</p>
+        </div>
+        <div class="outcome-divider"></div>
+        <div class="outcome" data-reveal>
+          <p class="outcome-value">Mayor rotación</p>
+          <p class="outcome-label">y uso del tiempo del equipo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO FORM -->
+    <section class="section" id="demo">
+      <div class="demo-inner">
+        <div data-reveal>
+          <p class="section-label">AGENDAR DEMOSTRACIÓN</p>
+          <h2 class="contact-title">Queremos romper la inercia y llevar este canal al siguiente nivel.</h2>
+          <p class="contact-desc" style="margin-top:12px;">
+            Cuéntanos sobre tu operación y agendamos una demo personalizada.
+          </p>
+        </div>
+        <form class="contact-form" id="demo-form" novalidate data-reveal>
+          <input type="text"  name="nombre"  placeholder="Nombre" required autocomplete="name" />
+          <input type="email" name="email"   placeholder="Email" required autocomplete="email" />
+          <input type="text"  name="empresa" placeholder="Empresa / Bodega" />
+          <textarea name="mensaje" placeholder="¿Cuántos vendedores tiene tu equipo? ¿En qué ciudades operan?" rows="4"></textarea>
+          <button type="submit" class="btn btn--primary" id="demo-submit">Agendar demo →</button>
+          <p class="form-status" id="demo-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span class="footer-logo">ATF WINES</span>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/index.html">Inicio</a>
+      <a href="/marketplace.html">Marketplace</a>
+      <a href="/#contacto">Contacto</a>
     </nav>
+    <p class="footer-copy">© 2025 ATF Wines</p>
+  </footer>
 
-    <div id="site-fab-rail"></div>
-
-    <main id="contenido" class="tactiq-main">
-      <section class="hero-text tactiq-home-hero" aria-label="TACTIQ">
-        <div class="hero-text__grid container">
-          <div class="hero-text__mast">
-            <h1 class="editorial-display">La venta de vinos y licores en el canal Horeca requiere:</h1>
-            <ul class="hero-text__support" aria-label="Pilares de TACTIQ">
-              <li class="hero-text__support-item hero-text__support-item--lead">
-                <span>Confianza</span>
-                <span>Know How</span>
-                <span>Seguimiento</span>
-                <span>Estrategia</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="hero-cta-row container">
-          <a class="statement__cta" href="#como-funciona">Explorar cómo</a>
-          <a class="btn btn--outline" href="#demo-form">Contáctanos</a>
-        </div>
-      </section>
-
-      <section class="section section--plain section--center-cards platform-section tactiq-platform" id="como-funciona" data-story>
-        <div class="container platform-section__inner">
-          <div class="narrow tactiq-platform__intro">
-            <h2 class="section__title">¿Qué es TACTIQ?</h2>
-            <p class="section__p section__p--muted">
-              Somos una plataforma que convierte la actividad comercial del canal HORECA en decisiones claras y acciones que impulsan ventas, guiando al equipo en terreno sobre qué hacer, dónde enfocar y cómo ejecutar.
-            </p>
-          </div>
-
-          <div class="narrow tactiq-platform__how">
-            <h3 class="section__title">¿Cómo lo logramos?</h3>
-          </div>
-          <ul class="product-banner__cards tactiq-platform__cards" aria-label="Cómo lo logramos en TACTIQ">
-            <li class="product-card">
-              <h3 class="product-card__label">Capturando lo que pasa en terreno</h3>
-              <p class="product-card__headline">Visibilidad real de clientes, cuentas y actividad comercial.</p>
-            </li>
-            <li class="product-card">
-              <h3 class="product-card__label">Ordenando la información automáticamente</h3>
-              <p class="product-card__headline">Priorización clara de cuentas, oportunidades y próximos pasos.</p>
-            </li>
-            <li class="product-card">
-              <h3 class="product-card__label">Activando acciones concretas</h3>
-              <p class="product-card__headline">Tareas automáticas y estratégicas según impacto comercial.</p>
-            </li>
-            <li class="product-card">
-              <h3 class="product-card__label">Guiando la ejecución con criterio</h3>
-              <p class="product-card__headline">Aplicamos know-how comercial directamente en la operación del equipo.</p>
-            </li>
-            <li class="product-card">
-              <h3 class="product-card__label">Construyendo inteligencia comercial continua</h3>
-              <p class="product-card__headline">Historial por cliente y vendedor, junto con lectura del contexto competitivo.</p>
-            </li>
-          </ul>
-
-          <div class="tactiq-platform__results">
-            <p class="tactiq-platform__result-statement">
-              Más foco. Mejor ejecución. Mayor rotación. Mejor uso del tiempo del equipo.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--plain section--center-cards contact-cta" id="demo-form" data-story>
-        <div class="container narrow">
-          <h2 class="section__title">Agendar demostración</h2>
-          <p class="section__p section__p--muted">Queremos romper la inercia y llevar este canal al siguiente nivel.</p>
-          <form class="tactiq-form contact-mini-form" action="#" method="post">
-            <label class="contact-mini-form__field">
-              <span>Nombre</span>
-              <input type="text" name="name" autocomplete="given-name" required />
-            </label>
-            <label class="contact-mini-form__field">
-              <span>Email</span>
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
-            <label class="contact-mini-form__field contact-mini-form__field--full">
-              <span>Mensaje</span>
-              <textarea name="message" rows="4"></textarea>
-            </label>
-            <input type="hidden" name="surname" value="-" />
-            <button class="btn btn--outline contact-mini-form__submit" type="submit">Enviar</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <div id="site-footer"></div>
-    <div id="site-dock"></div>
-
-    <script type="module" src="/main.js"></script>
-  </body>
+  <script type="module" src="/src/tactiq.js"></script>
+</body>
 </html>
