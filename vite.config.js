@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         tactiq: resolve(__dirname, "tactiq.html"),
+        marketplace: resolve(__dirname, "marketplace.html"),
       },
     },
   },

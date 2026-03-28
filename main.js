@@ -1,4 +1,5 @@
 import { getSupabaseClient } from "./supabaseClient.js";
+import { initPartials } from "./partials.js";
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -221,9 +222,11 @@ function initSupabaseDemoForm() {
   });
 }
 
+initPartials();
 initYear();
 initMenu();
 initHeroQuoteRotation();
 initExportAssistantBanner();
 initSupabaseDemoForm();
 initScrollStorytelling();
+initHomeSectionSnap();
